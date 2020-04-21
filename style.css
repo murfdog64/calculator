@@ -1,0 +1,120 @@
+body {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 350px;
+  height: 520px;
+  border: solid 1px #ccc;
+  background-color: #929292;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#top-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+#brand-name {
+  font-size: 25px;
+  color: lightgray;
+  margin-right: 40px;
+  margin-top: 33px;
+}
+
+#solar {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  width: 130px;
+  background-color: #6d3131;
+  border: 2px solid grey;
+  align-content: flex-end;
+}
+
+#solar:hover {
+  cursor: grab;
+}
+
+/* #solar:hover + #screen {
+  transition: ease-in-out 2s;
+  background-color: hotpink;
+} */
+
+.lines {
+  height: 60px;
+  width: 41px;
+  border-right: 2px solid #86835d;
+}
+
+#screen {
+  font-family: 'Digital-7';
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  width: 285px;
+  height: 60px;
+  background-color: #889c89;
+  font-size: 45px;
+  border: 2px solid grey;
+}
+
+#calculator > .row {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+#posneg {
+  background-color: lightseagreen;
+  border-bottom: 5px solid darkcyan;
+}
+
+#clear {
+  background-color: lightseagreen;
+  border-bottom: 5px solid darkcyan;
+}
+
+#equals {
+  background-color: lightseagreen;
+  border-bottom: 5px solid darkcyan;
+}
+
+.row > .btn {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #717171;
+  cursor: pointer;
+  background-color: peachpuff;
+  border-radius: 5%;
+  border-bottom: 5px solid rgb(182, 150, 101);
+  font-size: 24px;
+}
+
+.row > .btn:hover {
+  filter: brightness(110%);
+}
+
+.row > .btn.op {
+  background-color: lightseagreen;
+  border-bottom: 5px solid darkcyan;
+}
+
+.row > .btn:target {
+  border-bottom: 0px;
+}
+
+.row > .btn.dbl {
+  width: 135px;
+  height: 60px;
+}
