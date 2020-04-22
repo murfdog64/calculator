@@ -33,13 +33,6 @@ calculator.addEventListener('click', function(event){
 });
 
 function handleNumber(number) {
-  // if(currNum) {
-  //   addToScreen(number);
-  //   currNum += number;
-  // } else if (currOp) {
-  //   segments.push(currOp);
-  //   currOp = '';
-  // }
   if (currNum.includes('.')) {
     addToScreen(number);
     currNum += number;
@@ -47,6 +40,9 @@ function handleNumber(number) {
     segments = [];
     setScreen(number);
     currNum = number;
+  } else if (currNum === '-0') {
+    currNum = '-' + number;
+    setScreen(screen.innerText.slice(0,-1) + number.toString());
   } else {
     addToScreen(number);
     currNum += number;
@@ -123,11 +119,17 @@ function handleEquals() {
 }
 
 function setScreen(val) {
-  screen.innerText = val;
+  stringVal = val.toString();
+  if (stringVal.length > 12) {
+    slicedStuff = stringVal.slice(0,12);
+    screen.innerText = slicedStuff;
+  } else {
+    screen.innerText = stringVal;
+  }
 }
 
 function addToScreen(val) {
-  if (screen.innerText.length > 10) {
+  if (screen.innerText.length > 12) {
     return;
   } else {
     screen.innerText += val;
@@ -142,9 +144,6 @@ function handlePosNeg() {
     currNum = '-' + currNum;
   }
   else if (lastIsOp) {
-    segments.pop(currOp);
-    currOp = null;
-    setScreen(screen.innerText.slice(0,-1));
     addToScreen('-0');
     currNum = '-0'
   }
@@ -174,13 +173,14 @@ document.addEventListener('keyup', function(event){
   }
 });
 
-// solar.onmouseover = solar.onmouseout = solarHandler;
+solar.onmouseover = solar.onmouseout = solarHandler;
 
-// function solarHandler(event) {
-//   if (event.type === 'mouseover') {
-//     screen.innerText.style.opacity = '0';
-//   }
-//   if (event.type === 'mouseout') {
-//     screen.innerText.style.opacity = '100';
-//   }
-// }
+function solarHandler(event) {
+  if (event.type === 'mouseover') {
+    screen.style.transition = '5s';
+    screen.style.color = '#889c89';
+  }
+  if (event.type === 'mouseout') {
+    screen.style.color = 'black';
+  }
+}

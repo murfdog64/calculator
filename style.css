@@ -15,6 +15,7 @@ body {
   background-color: #929292;
   padding-top: 20px;
   padding-bottom: 20px;
+  border-radius: 10px;
 }
 
 #top-bar {
@@ -37,6 +38,9 @@ body {
   background-color: #6d3131;
   border: 2px solid grey;
   align-content: flex-end;
+  border: 2px solid #ababab;
+  border-top: 3px solid #525151;
+  border-left: 3px solid #525151;
 }
 
 #solar:hover {
@@ -59,11 +63,15 @@ body {
   font-style: italic;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 285px;
   height: 60px;
   background-color: #889c89;
   font-size: 45px;
-  border: 2px solid grey;
+  border: 2px solid #ababab;
+  border-top: 3px solid #525151;
+  border-left: 3px solid #525151;
+  padding-right: 15px;
 }
 
 #calculator > .row {
@@ -96,7 +104,7 @@ body {
   border: 1px solid #717171;
   cursor: pointer;
   background-color: peachpuff;
-  border-radius: 5%;
+  border-radius: 10%;
   border-bottom: 5px solid rgb(182, 150, 101);
   font-size: 24px;
 }
