@@ -11,16 +11,21 @@ body {
   align-items: center;
   width: 350px;
   height: 520px;
-  border: solid 1px #ccc;
+  border: solid 1px #757575;
   background-color: #929292;
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
+  border-bottom: 8px solid rgb(88, 88, 88);
+  -webkit-box-shadow: 0px 1px 0px 1px #777777;
+  -moz-box-shadow: 0px 1px 0px 1px #777777;
+  box-shadow: 4px 4px 6px 1px #777777;
 }
 
 #top-bar {
   display: flex;
   justify-content: space-between;
+  font-style: italic;
 }
 
 #brand-name {
@@ -82,17 +87,17 @@ body {
 
 #posneg {
   background-color: lightseagreen;
-  border-bottom: 5px solid darkcyan;
+  border-bottom: 3px solid darkcyan;
 }
 
 #clear {
   background-color: lightseagreen;
-  border-bottom: 5px solid darkcyan;
+  border-bottom: 3px solid darkcyan;
 }
 
 #equals {
   background-color: lightseagreen;
-  border-bottom: 5px solid darkcyan;
+  border-bottom: 3px solid darkcyan;
 }
 
 .row > .btn {
@@ -104,9 +109,12 @@ body {
   border: 1px solid #717171;
   cursor: pointer;
   background-color: peachpuff;
-  border-radius: 10%;
-  border-bottom: 5px solid rgb(182, 150, 101);
+  border-radius: 7px;
+  border-bottom: 3px solid rgb(182, 150, 101);
   font-size: 24px;
+  -webkit-box-shadow: 0px 1px 0px 1px #333333;
+  -moz-box-shadow: 0px 1px 0px 1px #333333;
+  box-shadow: 0px 1px 0px 1px #333333;
 }
 
 .row > .btn:hover {
@@ -115,7 +123,7 @@ body {
 
 .row > .btn.op {
   background-color: lightseagreen;
-  border-bottom: 5px solid darkcyan;
+  border-bottom: 3px solid darkcyan;
 }
 
 .row > .btn:target {
