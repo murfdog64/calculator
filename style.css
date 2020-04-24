@@ -12,7 +12,14 @@ body {
   width: 350px;
   height: 520px;
   border: solid 1px #757575;
-  background-color: #929292;
+  background: rgb(170, 170, 170);
+  background: linear-gradient(
+    169deg,
+    rgba(170, 170, 170, 1) 0%,
+    rgba(146, 146, 146, 1) 20%,
+    rgba(146, 146, 146, 1) 80%,
+    rgba(105, 105, 105, 1) 100%
+  );
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 10px;
@@ -28,11 +35,29 @@ body {
   font-style: italic;
 }
 
+.logos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+
 #brand-name {
   font-size: 25px;
   color: lightgray;
   margin-right: 40px;
-  margin-top: 33px;
+}
+
+#solar-name {
+  font-size: 10px;
+  color: lightgray;
+}
+
+#model-num {
+  font-size: 10px;
+  color: lightgray;
+  text-align: end;
+  margin-top: 4px;
 }
 
 #solar {
@@ -41,8 +66,8 @@ body {
   height: 60px;
   width: 130px;
   background-color: #6d3131;
-  border: 2px solid grey;
   align-content: flex-end;
+  border-radius: 3px;
   border: 2px solid #ababab;
   border-top: 3px solid #525151;
   border-left: 3px solid #525151;
@@ -71,6 +96,7 @@ body {
   justify-content: flex-end;
   width: 285px;
   height: 60px;
+  border-radius: 5px;
   background-color: #889c89;
   font-size: 45px;
   border: 2px solid #ababab;
@@ -101,6 +127,7 @@ body {
 }
 
 .row > .btn {
+  font-family: Orbitron, sans-serif;
   display: flex;
   width: 60px;
   height: 60px;
@@ -133,4 +160,57 @@ body {
 .row > .btn.dbl {
   width: 135px;
   height: 60px;
+}
+
+/* COVER OVERLAY */
+
+.container {
+  position: relative;
+  width: 350px;
+}
+
+.cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgb(235, 229, 170);
+  background: linear-gradient(
+    180deg,
+    rgba(235, 229, 170, 0.9) 0%,
+    rgba(255, 252, 225, 0.5) 05%,
+    rgba(255, 252, 225, 0.5) 95%,
+    rgba(235, 229, 170, 0.9) 100%
+  );
+  overflow: hidden;
+  width: 350px;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.solar-hole {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.5);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(53% 4%, 53% 16%, 91% 16%, 91% 4%);
+}
+
+.eye-holes {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.5);
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(7% 20%, 7% 31.5%, 94% 31.5%, 94% 20%);
+}
+
+.container:hover .cover {
+  bottom: 100%;
+  height: 0;
 }
