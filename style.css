@@ -182,6 +182,7 @@ body {
     rgba(255, 252, 225, 0.5) 95%,
     rgba(235, 229, 170, 0.9) 100%
   );
+  border-radius: 10px;
   overflow: hidden;
   width: 350px;
   height: 100%;
@@ -194,6 +195,7 @@ body {
   background-color: rgba(118, 118, 118, 0.5);
   top: 0;
   left: 0;
+  border-radius: 3px;
   position: absolute;
   z-index: 1;
   clip-path: polygon(53% 4%, 53% 16%, 91% 16%, 91% 4%);
@@ -205,12 +207,50 @@ body {
   background-color: rgba(118, 118, 118, 0.5);
   top: 0;
   left: 0;
+  border-radius: 5px;
   position: absolute;
   z-index: 1;
   clip-path: polygon(7% 20%, 7% 31.5%, 94% 31.5%, 94% 20%);
 }
+/* 
+#button-one {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.5);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(9% 43.5%, 11% 44.5%, 47% 44.5%, 49% 43.5%);
+}
+
+#button-two {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.5);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(52% 43.5%, 54% 44.5%, 68% 44.5%, 70% 43.5%);
+}
+
+#button-three {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 118, 118, 0.5);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(73% 43.5%, 75% 44.5%, 89% 44.5%, 91% 43.5%);
+} */
 
 .container:hover .cover {
+  /* transform: skew(10deg) translate(10px); */
   bottom: 100%;
   height: 0;
 }
